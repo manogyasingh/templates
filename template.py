@@ -1,6 +1,6 @@
 #IO OPTIMISATIONS
-from sys import stdin
-input = stdin.readline
+import io, os
+input = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline().strip
 
 #IMPORTS
 #from itertools import combinations
